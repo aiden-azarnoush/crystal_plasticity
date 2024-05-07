@@ -1,11 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CP_Project.m
-% Author: Michael  Garcia
+% Authors:
+%         Aiden Azarnoush 
+%         Michael  Garcia
 %         Aisha    Gautam
-%         Mohammad Azarnoush 
-% E-mail: michael.e.garcia@asu.edu
+% E-mail: 
+%         mazarnou@purdue.edu
+%         michael.e.garcia@asu.edu
 %         aisha.s.gautam@gmail.edu
-%         mazarnou@asu.edu
 % Description:
 % This project involves the development of a point integrator capable of 
 % evaluating evolution of flow stress in copper single crystals under 
