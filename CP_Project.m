@@ -33,7 +33,7 @@
 % plot_Sp            : plot Sp vs time for 12 each slip system
 % plot_gamma_dot     : plot gamma_dot vs time for each 12 slip system
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function CP_Project
+function crystal_plasticity_matlab
 
 close all;
 clc;
