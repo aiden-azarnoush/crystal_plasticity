@@ -2,7 +2,7 @@
 
 ''' Author
     ==========
-      Mohammad Azarnoush (mazarnou@asu.edu)
+      Aiden Azarnoush (mazarnou@purdue.edu)
 
     Description
     ===========
