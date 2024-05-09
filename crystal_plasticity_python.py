@@ -19,6 +19,8 @@
     Date
     ==========
       28.12.2014
+
+    Dedicated to my mother - Simin Nematpour
 '''
 from numpy import *
 from  scipy.linalg import inv,det,logm,expm,block_diag,svd
