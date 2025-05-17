@@ -78,7 +78,8 @@ $$\tilde{\mathbf{L}}_p = \dot{\mathbf{F}}_p\mathbf{F}_p^{-1}$$
 
 The plastic velocity gradient is formulated in terms of slip systems:
 
-$$\tilde{\mathbf{L}}_p = \sum_{\alpha=1}^{N_s}\dot{\gamma}^\alpha \mathbf{m}_0^\alpha \otimes \mathbf{n}_0^\alpha$$
+$$ \tilde{L_p} = \sum_{\alpha=1}^{N_s} \dot{\gamma}^{\alpha} m_{0}^{\alpha} \otimes n_0^{\alpha}$$
+
 
 where $\dot{\gamma}^\alpha$ is the slip rate, $N_s$ is the total number of active slip systems (12 for FCC copper), and $\mathbf{m}_0^\alpha$ and $\mathbf{n}_0^\alpha$ are unit normal to the slip planes and slip directions, respectively.
 
@@ -86,7 +87,8 @@ where $\dot{\gamma}^\alpha$ is the slip rate, $N_s$ is the total number of activ
 
 The viscoplastic flow rule for the single crystal slip rate is given by:
 
-$$\dot{\gamma}^\alpha = \dot{\gamma}_0 \text{sgn}(\tau^\alpha) \exp\left[-\frac{E_0}{kT}\left\langle 1 - \left\langle \frac{|\tau^\alpha| - S_\rho^\alpha}{S_l^\alpha} \right\rangle^{m_1} \right\rangle^{m_2} \right]$$
+$$\dot{\gamma}^\alpha = \dot{\gamma_0} \text{sgn}(\tau^\alpha) \exp\left[-\frac{E_0}{kT}\left\langle 1 - \left\langle \frac{|\tau^\alpha| - S_\rho^\alpha}{S_l^\alpha} \right\rangle^{m_1} \right\rangle^{m_2} \right]$$
+
 
 where:
 - $E_0$ is the thermal barrier energy
@@ -131,7 +133,7 @@ C_{12} & C_{12} & C_{11} & 0 & 0 & 0 \\
 
 The evolution of slip resistance is defined as:
 
-$$\dot{S}_\rho^\alpha = \sum_{\beta=1}^{N_s} h_{\alpha\beta}|\dot{\gamma}^\beta|$$
+$$\dot{S_\rho^\alpha} = \sum_{\beta=1}^{N_s} h_{\alpha\beta}|\dot{\gamma}^\beta|$$
 
 where $h_{\alpha\beta}$ is the hardening matrix or instantaneous strain hardening moduli. Three different hardening formulations are implemented:
 
@@ -198,14 +200,14 @@ The implementation uses an explicit numerical integration scheme. The key steps 
    $$\mathbf{F}_p^{t+\Delta t} = \exp(\tilde{\mathbf{L}}_p^t \Delta t)\mathbf{F}_p^t$$
 
 2. Compute the plastic velocity gradient:
-   $$\tilde{\mathbf{L}}_p^t = \sum_{\alpha=1}^{N_s}\dot{\gamma}_t^\alpha \mathbf{m}_0^\alpha \otimes \mathbf{n}_0^\alpha$$
+   $$\tilde{L_p}^t = \sum_{\alpha=1}^{N_s}\dot{\gamma}_t^\alpha m_0^\alpha \otimes n_0^\alpha$$
 
 3. Update the slip resistance and shear strain:
-   $$S_{p,t+\Delta t}^\alpha = S_{p,t}^\alpha + \dot{S}_{p,t}^\alpha \Delta t$$
+   $$S_{p,t+\Delta t}^\alpha = S_{p,t}^\alpha + \dot{S_{p,t}}^\alpha \Delta t$$
    $$\gamma_{t+\Delta t}^\alpha = \gamma_t^\alpha + \dot{\gamma}_t^\alpha \Delta t$$
 
 4. Update the elastic deformation gradient:
-   $$\mathbf{F}_{t+\Delta t}^e = \mathbf{F}_{t+\Delta t}(\mathbf{F}_{t+\Delta t}^p)^{-1}$$
+   $$F_{t+\Delta t}^e = F_{t+\Delta t}(F_{t+\Delta t}^p)^{-1}$$
 
 This algorithm can be used for any form of the deformation gradient, though the current implementation focuses on uniaxial strain where:
 
@@ -259,7 +261,7 @@ This behavior is related to the FCC crystal structure of copper. When copper is 
 
 The back stress increases for all hardening models due to the evolution equation:
 
-$$\dot{S}_\rho^\alpha = \sum_{\beta=1}^{N_s} h_{\alpha\beta}|\dot{\gamma}^\beta|$$
+$$\dot{S_\rho}^\alpha = \sum_{\beta=1}^{N_s} h_{\alpha\beta}|\dot{\gamma}^\beta|$$
 
 Although shear strain rates change, their multiplication with the hardening moduli leads to increasing back stress. The differences between hardening models are evident in the back stress evolution:
 
@@ -277,19 +279,18 @@ Although shear strain rates change, their multiplication with the hardening modu
 
 Run the main script to start the simulation:
 
-```matlab
-CP_Project
+```python
+crystal_plasticity_python.py
 ```
 
 ## Usage
 
-Run the main script to start the simulation:
-
-CP_Project
+Run the main script to start the simulation. 
 
 The user will be prompted to:
 1. Select crystal orientation (or specify a custom one)
-   
+
+```text
    Crystal orientation:
    1- <100>
    2- <110>
@@ -297,16 +298,17 @@ The user will be prompted to:
    4- <580>
    5- other
    > 
-   
+```
 
-2. Choose the hardening model to use
-   
+1. Choose the hardening model to use
+
+```text
    Which hardening model:
    1- Asaro and Needleman hardening model
    2- Bassani and Wu hardening model
    3- Luscher et al. hardening model
    > 
-   
+``` 
 
 ## Output
 
