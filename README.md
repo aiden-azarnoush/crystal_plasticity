@@ -112,7 +112,7 @@ $$\mathbf{n}^\alpha = \mathbf{F}_e^{-T}\mathbf{n}_0^\alpha$$
 
 The 2nd Piola Kirchhoff stress is related to the Cauchy stress by:
 
-$$\tilde{\mathbf{S}} = \det(\mathbf{F}_e)(\mathbf{F}_e^{-1}\boldsymbol{\sigma}\mathbf{F}_e^{-T})$$
+$$\tilde{\mathbf{S}} = \det(\mathbf{F}_e)(\mathbf{F}_e^{-1}\mathbf{\sigma}\mathbf{F}_e^{-T})$$
 
 Using a hyperelastic formulation, the stress-strain relationship is:
 
