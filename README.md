@@ -100,7 +100,7 @@ where:
 
 The resolved shear stress is defined as:
 
-$$\tau^\alpha = \boldsymbol{\sigma} : (\mathbf{m}^\alpha \otimes \mathbf{n}^\alpha)$$
+$$\tau^\alpha = \mathbf{\sigma} : (\mathbf{m}^\alpha \otimes \mathbf{n}^\alpha)$$
 
 where $\mathbf{m}^\alpha$ and $\mathbf{n}^\alpha$ are the slip plane normal and slip direction pushed to the current configuration:
 
