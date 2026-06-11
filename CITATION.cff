@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Crystal Plasticity Framework: Busso flow rule with Asaro-Needleman, Bassani-Wu, and Luscher hardening models"
+authors:
+  - family-names: "Azarnoush"
+    given-names: "Aiden"
+    email: "aiden-azarnoush@outlook.com"
+year: 2026
+repository-code: "https://github.com/aiden-azarnoush/crystal_plasticity"
