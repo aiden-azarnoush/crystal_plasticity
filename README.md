@@ -17,7 +17,7 @@ This repository contains an implementation of an explicit point integration Crys
 
 Over the past several decades, the study of anisotropic finite plasticity of single crystals has been widely investigated due to its impact in advanced metal forming processes and various industries, particularly microelectronics, which integrate single crystal materials into devices due to their advantageous properties. There is a demand to understand the mechanical and structural response of single crystal materials at the macroscopic/microscopic scale under large deformation.
 
-The repository was originally developed by Aiden Azarnoush (mazarnou@purdue.edu) and includes contributions from collaborators at the School of Engineering of Matter Transport and Energy.
+The repository was originally developed by Aiden Azarnoush (aiden-azarnoush@outlook.com) and includes contributions from collaborators at the School of Engineering of Matter Transport and Energy.
 
 ## Features
 
